@@ -1,0 +1,67 @@
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    height:70px ;
+}
+/* Ensure the layout takes full height of the viewport */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it's above other elements */
+  background-color: #fff; /* Adjust to match your design */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
+}
+
+.content {
+  margin-top: 60px; /* Adjust according to the height of your header */
+  flex: 1; /* Allows the main content to grow and fill available space */
+  padding: 20px; /* Optional: Add some padding */
+  overflow: auto; /* Enables scrolling for content if necessary */
+}
+
+footer {
+  background-color: #f8f9fa; /* Adjust to match your design */
+  padding: 20px; /* Optional: Add some padding */
+}
+
+.custom_card {
+  background-color: rgba(33, 37, 41, 1) !important; /* Proper use of !important */
+}
+
+
+.heading-t{
+    color: white;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+.img-new{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  padding: 22px;
+} 
+.custom-nav-link {
+  font-size: 6rem; /* Custom font size */
+}
+.custom-nav-link-d {
+  font-size: 1rem !important; /* Custom font size */
+  border: 7px solid !important;
+  color: red !important;
+  border-radius: 6px;
+  width: 92px;
+  height: 54px;
+}
