@@ -102,11 +102,11 @@ const Content = () => {
 </div>
 
       <Modal />
-      <div className='fluid-container'>
+      <div className='container'>
         <div className='row'>
           {data.map((item, index) => (
             <div className='col-md-3' key={item.id}>
-              <div className="card mt-4 mb-4" style={{ width: '20rem' }}>
+              <div className="card mt-4 mb-4" style={{ width: '16rem' }}>
                 <img src={item.image}
                   className='img-new'
                 />
