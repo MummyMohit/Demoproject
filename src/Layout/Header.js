@@ -2,10 +2,11 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logopic } from '../Pic/Pic';
 import useModal from '../ContextApi/Usemodal';
+import { CgChevronDown } from "react-icons/cg";
 const Header = () => {
   const location = useLocation(); // Get current route
   const { toggleModal } = useModal();
-  
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,6 +23,9 @@ const Header = () => {
                   className={`nav-link custom-nav-link { ${location.pathname === '/' ? 'active' : ''}`}
                 >
                   Home
+                  <CgChevronDown
+                    style={{ color: 'red' }}
+                  />
                 </Link>
               </li>
               <li className="nav-item">
@@ -34,7 +38,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <button
-            onClick={toggleModal}
+                  onClick={toggleModal}
                   className={` nav-link custom-nav-link-d`}
                 >
                   Pricing

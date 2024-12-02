@@ -6,12 +6,16 @@ import {
 } from "react-router-dom";
 import Context from './ContextApi/Context';
 import router from './router';
+import { Provider } from 'react-redux';
+import store from './Redux/Store';
 function App() {
   return (
    <>
+   <Provider store={store}>
    <Context>
     <RouterProvider router={router} />
     </Context>
+    </Provider>
    </>
   );
 }

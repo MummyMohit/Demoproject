@@ -22,17 +22,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
 }
 
-.content {
-  margin-top: 60px; /* Adjust according to the height of your header */
-  flex: 1; /* Allows the main content to grow and fill available space */
-  padding: 20px; /* Optional: Add some padding */
-  overflow: auto; /* Enables scrolling for content if necessary */
-}
-
-footer {
-  background-color: #f8f9fa; /* Adjust to match your design */
-  padding: 20px; /* Optional: Add some padding */
-}
 
 .custom_card {
   background-color: rgba(33, 37, 41, 1) !important; /* Proper use of !important */
@@ -64,4 +53,90 @@ footer {
   border-radius: 6px;
   width: 92px;
   height: 54px;
+}
+/* Container styling */
+.container {
+  padding: 20px;
+}
+
+/* Custom card styling */
+.custom-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%; /* Ensures cards take up equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.custom-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 6px 10px rgba(3, 57, 139, 0.15);
+  background-color: purple;
+}
+
+/* Image styling */
+.custom-img {
+  width: 100%;
+  height: 180px; /* Ensures a consistent height */
+  object-fit: cover; /* Maintain aspect ratio and cover space */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Card body content */
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.card-price {
+  font-size: 1rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.custom-form-control{
+  height: 71px;
+  margin-top: 21px;
+}
+
+
+.img-custom{
+  width: 700px;
+  height: 500px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

@@ -1,13 +1,15 @@
 import Logopic from '../Image/reshot-icon-food-drink-B4CS9RFA8L.svg'
-import Lily from '../Image/istockphoto-1829241109-612x612.jpg'
-import Lipi from '../Image/pexels-chanwalrus-958545.jpg'
-import Sily from'../Image/premium_photo-1673108852141-e8c3c22a4a22.jfif'
-import Nature from '../Image/pexels-souvenirpixels-417074.jpg'
 
+import Lipi from '../Image/pexels-robin-381450-1020370.jpg'
+import Sily from'../Image/pexels-igor-ovsyannykov-56123-205961.jpg'
+import Nature from '../Image/pexels-felixmittermeier-956999.jpg'
+import  Basic from '../Image/pexels-karolina-grabowska-5717939.jpg'
+import Room from '../Image/pexels-pixabay-271624.jpg'
 export{
     Logopic,
-    Lily,
     Lipi,
     Sily,
-    Nature
+    Nature,
+    Basic,
+    Room
 }

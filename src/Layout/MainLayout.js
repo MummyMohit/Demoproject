@@ -22,7 +22,7 @@ const MainLayout = () => {
       <div className="fixed-header">
         <Header />
       </div>
-      <div className="content">
+      <div>
         <Outlet />
       </div>
       <div>
