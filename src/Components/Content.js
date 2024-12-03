@@ -107,12 +107,12 @@ const Content = () => {
       <div className="container my-4">
         <div className="row">
           {data.map((item) => (
-            <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={item.id}>
-              <div className="custom-card">
+            <div className="col-lg-3 col-md-4 col-sm-6 col-12 card-mbl" key={item.id}>
+              <div className="custom-card ">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="custom-img"
+                  className="custom-img img-fluid"
                 />
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
@@ -134,7 +134,7 @@ const Content = () => {
           </div>
           <div className='col-md-4 col-sm-6  col-lg-3'>
             <img src={Room}
-          className='img-custom'
+          className='img-custom img-fluid'
           alt="Room"
        data-aos="fade-left" // Add your desired animation type
             />

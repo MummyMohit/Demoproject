@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Logopic } from '../Pic/Pic';
 import useModal from '../ContextApi/Usemodal';
 import { CgChevronDown } from "react-icons/cg";
+
 const Header = () => {
   const location = useLocation(); // Get current route
   const { toggleModal } = useModal();
@@ -11,27 +12,45 @@ const Header = () => {
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          {/* Logo */}
-          <img src={Logopic} alt="Logo" style={{ width: '50px', height: '50px' }} />
-          <h3 className="heading-t">Food App</h3>
+          {/* Logo and Brand */}
+          <div className="d-flex align-items-center">
+            <img 
+              src={Logopic} 
+              alt="Logo" 
+              className="logo-img img-fluid"
+            />
+            <h3 className="heading-t m-0 ms-2">Food App</h3>
+          </div>
+
+          {/* Toggle Button for Mobile */}
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Navigation Links */}
           <div className="collapse navbar-collapse" id="navbarNav">
-            {/* Use ms-auto to push the navbar items to the right */}
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link
                   to="/"
-                  className={`nav-link custom-nav-link { ${location.pathname === '/' ? 'active' : ''}`}
+                  className={`nav-link custom-nav-link ${location.pathname === '/' ? 'active' : ''}`}
                 >
                   Home
-                  <CgChevronDown
-                    style={{ color: 'red' }}
-                  />
+                  <CgChevronDown className="ms-1 chevron-icon" />
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   to="/table"
-                  className={`nav-link custom-nav-link { ${location.pathname === '/table' ? 'active' : ''}`}
+                  className={`nav-link custom-nav-link ${location.pathname === '/table' ? 'active' : ''}`}
                 >
                   Table
                 </Link>
@@ -39,7 +58,7 @@ const Header = () => {
               <li className="nav-item">
                 <button
                   onClick={toggleModal}
-                  className={` nav-link custom-nav-link-d`}
+                  className="nav-link custom-nav-link"
                 >
                   Pricing
                 </button>

@@ -19,13 +19,13 @@ const MainLayout = () => {
         justifyContent: 'space-between',
       }}
     >
-      <div className="fixed-header">
+      <div className="fixed-header col-md-12 col-lg-12 col-sm-12">
         <Header />
       </div>
       <div>
         <Outlet />
       </div>
-      <div>
+      <div className='col-md-12 col-lg-12 col-sm-12'>
         <Footer />
       </div>
     </div>
