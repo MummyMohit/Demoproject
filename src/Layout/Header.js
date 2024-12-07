@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logopic } from '../Pic/Pic';
 import useModal from '../ContextApi/Usemodal';
@@ -7,6 +7,7 @@ import { CgChevronDown } from "react-icons/cg";
 const Header = () => {
   const location = useLocation(); // Get current route
   const { toggleModal } = useModal();
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <header>
@@ -38,7 +39,12 @@ const Header = () => {
           {/* Navigation Links */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
+              {/* Home Dropdown */}
+              <li 
+                className="nav-item dropdown" 
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
+              >
                 <Link
                   to="/"
                   className={`nav-link custom-nav-link ${location.pathname === '/' ? 'active' : ''}`}
@@ -46,6 +52,11 @@ const Header = () => {
                   Home
                   <CgChevronDown className="ms-1 chevron-icon" />
                 </Link>
+                <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+                  <li><Link to="/option1" className="dropdown-item">Option 1</Link></li>
+                  <li><Link to="/option2" className="dropdown-item">Option 2</Link></li>
+                  <li><Link to="/option3" className="dropdown-item">Option 3</Link></li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link
@@ -81,3 +92,4 @@ const Header = () => {
 };
 
 export default Header;
+

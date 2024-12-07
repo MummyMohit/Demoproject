@@ -7,6 +7,7 @@ import MainLayout from "./Layout/MainLayout";
 import Content from "./Components/Content";
 import Table from "./Components/Table";
 import Form from "./Components/Form"
+import Product from "./Views/Product";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -25,6 +26,11 @@ import Form from "./Components/Form"
         {
           path: "/form",
           element: <Form />,
+          
+        },
+        {
+          path: "/product",
+          element: <Product />,
           
         },
       ],

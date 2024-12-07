@@ -38,7 +38,7 @@ const Table = () => {
         </form>
         <div className="col-md-6 col-lg-4 col-sm-6 mt-4">
           <ul className="list-group">
-            {count.map((item, index) => (
+            {count?.map((item, index) => (
               <li className="list-group-item" key={index}>
                 {item}
               </li>

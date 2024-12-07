@@ -5,11 +5,13 @@ import Sily from'../Image/pexels-igor-ovsyannykov-56123-205961.jpg'
 import Nature from '../Image/pexels-felixmittermeier-956999.jpg'
 import  Basic from '../Image/pexels-karolina-grabowska-5717939.jpg'
 import Room from '../Image/pexels-pixabay-271624.jpg'
+import Dvideo from '../Image/3753702-uhd_3840_2160_25fps.mp4'
 export{
     Logopic,
     Lipi,
     Sily,
     Nature,
     Basic,
-    Room
+    Room,
+    Dvideo
 }
