@@ -35,7 +35,7 @@ const Product = () => {
       <div className='row'>
         <div className='col-md-6 col-lg-6 col-sm-6'>
       <div key={data.id}>
-        <img src={data.image} className="card-img-top img-fluid" alt={data.title} />
+        <img src={data.image} className="card-img-top img-fluid p-img" alt={data.title} />
         <div className="card-body">
           <h5 className="card-title heading-t">{data.title}</h5>
           <p className="card-text heading-t">{data.description}</p>

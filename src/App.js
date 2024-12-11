@@ -7,7 +7,8 @@ import {
 import Context from './ContextApi/Context';
 import router from './router';
 import { Provider } from 'react-redux';
-import store from './reduxstoolkit/CreateStore';
+// import store from './reduxstoolkit/CreateStore';
+import store  from './reduxstoolkit/CreateStore'
 
 function App() {
   return (

@@ -1,9 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { todoAdded,todoToggled } from './UserSlice'
-import todosReducer from './UserSlice'
- const store = configureStore({
+import { configureStore } from '@reduxjs/toolkit';
+import productsReducer from '../reduxstoolkit/productSlice'
+import tableSlice from '../reduxstoolkit/TableSlice'
+const store = configureStore({
   reducer: {
-    todos: todosReducer,
+    products: productsReducer,
+    table:tableSlice
   },
-})
-export default store
+});
+
+export default store;
+

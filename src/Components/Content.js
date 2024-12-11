@@ -1,29 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Logopic, Lipi, Sily, Basic,Room } from '../Pic/Pic';
+import { Logopic, Lipi, Sily, Basic, Room } from '../Pic/Pic';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../ApI/ProductApi'
 import axios from 'axios'
 import Modal from '../Share/Modal';
 const Content = () => {
 
   const [data, setData] = useState([]);
-const navigate = useNavigate();
-  const Fetchdata = async () => {
-    try {
-      const reasponse = await axios.get(`https://fakestoreapi.com/products`)
-      setData(reasponse.data)
+  const dispatch = useDispatch();
+  const { products, loading, error } = useSelector((state) => state.products);
+  const navigate = useNavigate();
 
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   const sendData = (item) => {
-    navigate('/product', { state: { id:item } }); // Correctly specify the property name and value
+    navigate('/product', { state: { id: item } }); // Correctly specify the property name and value
   };
   useEffect(() => {
-    Fetchdata();
-  }, [])
-  return ( 
+    dispatch(fetchProducts());
+  }, [dispatch]);
+  return (
     <>
       <div id="carouselExampleIndicators" className="carousel slide w-100 mt-2" data-bs-ride="carousel">
         {/* Carousel Indicators */}
@@ -110,8 +106,8 @@ const navigate = useNavigate();
       </div>
       <div className="container my-4">
         <div className="row">
-          {data?.map((item) => (
-            <div className="col-lg-3 col-md-4 col-sm-6 col-12 card-mbl" key={item?.id} onClick={()=>sendData(item.id)}>
+          {products?.map((item) => (
+            <div className="col-lg-3 col-md-4 col-sm-6 col-12 card-mbl" key={item?.id} onClick={() => sendData(item.id)}>
               <div className="custom-card ">
                 <img
                   src={item?.image}
@@ -132,15 +128,15 @@ const navigate = useNavigate();
         <div className='row'>
           <div className='col-md-6 col-sm-6  col-lg-6'>
             <h1 className='heading-t ml-4'>Products Name </h1>
-            <p className='heading-t ml-4 '  data-aos="fade-right">Upgrade your wardrobe essentials with our Classic Cotton Crewneck T-Shirt, the perfect blend of comfort and style. Made from 100% premium breathable cotton, this t-shirt offers a soft touch and lightweight feel, keeping you cool and comfortable all day long.
+            <p className='heading-t ml-4 ' data-aos="fade-right">Upgrade your wardrobe essentials with our Classic Cotton Crewneck T-Shirt, the perfect blend of comfort and style. Made from 100% premium breathable cotton, this t-shirt offers a soft touch and lightweight feel, keeping you cool and comfortable all day long.
 
               Designed with a timeless crewneck and a tailored fit, it's perfect for casual outings, layering under jackets, or pairing with jeans for a relaxed look. Available in a variety of colors to match your mood and style.</p>
           </div>
           <div className='col-md-6 col-sm-6 col-lg-6'>
             <img src={Room}
-          className='img-cu img-fluid'
-          alt="Room"
-       data-aos="fade-left" // Add your desired animation type
+              className='img-cu img-fluid'
+              alt="Room"
+              data-aos="fade-left" // Add your desired animation type
             />
           </div>
         </div>

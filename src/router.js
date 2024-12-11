@@ -33,6 +33,7 @@ import Product from "./Views/Product";
           element: <Product />,
           
         },
+       
       ],
     },
   ]);
