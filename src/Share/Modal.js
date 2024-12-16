@@ -21,7 +21,7 @@ const Modal = () => {
     price: Yup.string().required('Price is required'),
     description: Yup.string().required('Description is required'),
     category: Yup.string().required('Category is required'),
-    file: Yup.mixed().required('Image is required'),
+    file: Yup.string().required('Image is required'),
   });
 
   const formik = useFormik({

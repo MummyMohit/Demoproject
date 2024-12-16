@@ -39,7 +39,7 @@ const Table = () => {
   return (
     <div className="container mt-5">
       <form onSubmit={(e) => e.preventDefault()}>
-        <div className="row">
+        <div className="row mt-4">
           <div className="form-group col-md-6 col-lg-6 col-sm-6">
             <label htmlFor="taskInput">Task</label>
             <input
@@ -64,6 +64,8 @@ const Table = () => {
               onChange={handleChange}
             />
           </div>
+          </div>
+          <div className='row'>
           <div className="form-group col-md-6 col-lg-6 col-sm-6">
             <label htmlFor="deadlineInput">Deadline</label>
             <input
@@ -75,21 +77,25 @@ const Table = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="form-group col-md-6 col-lg-6 col-sm-6 mt-4">
+        
+           <div className="form-group col-md-6 col-lg-6 col-sm-6">
             <label htmlFor="imageInput">Upload Image</label>
             <input
               type="file"
-              className="form-control-file"
-              id="imageInput"
+             className="form-control"
+             id="imageInput"
+              name="deadline"
+              value={inputdata.file}
               onChange={handleImageChange}
             />
+          </div>
           </div>
           <div className="form-group col-md-6 col-lg-4 col-sm-6 mt-4">
             <button type="button" onClick={handleAddTask} className="btn btn-dark">
               Add Task
             </button>
           </div>
-        </div>
+        
       </form>
       <div className="mt-4">
         <div className='row'>
