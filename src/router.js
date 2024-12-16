@@ -8,6 +8,7 @@ import Content from "./Components/Content";
 import Table from "./Components/Table";
 import Form from "./Components/Form"
 import Product from "./Views/Product";
+import Login from "./Login/Login";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -31,6 +32,11 @@ import Product from "./Views/Product";
         {
           path: "/product",
           element: <Product />,
+          
+        },
+        {
+          path: "/login",
+          element: <Login />,
           
         },
        

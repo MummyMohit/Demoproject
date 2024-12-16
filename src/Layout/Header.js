@@ -74,7 +74,14 @@ const Header = () => {
                   Table
                 </Link>
               </li>
-
+              <li className="nav-item">
+                <Link
+                  to="/login"
+                  className={`nav-link custom-nav-link ${location.pathname === "/login" ? "active" : ""}`}
+                >
+                  Login
+                </Link>
+              </li>
               {/* Pricing Button */}
               <li className="nav-item">
                 <button
@@ -85,16 +92,6 @@ const Header = () => {
                 </button>
               </li>
 
-              {/* Disabled Link */}
-              <li className="nav-item">
-                <Link
-                  to="#"
-                  className="nav-link disabled"
-                  aria-disabled="true"
-                >
-                  Disabled
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
