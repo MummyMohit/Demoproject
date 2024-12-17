@@ -9,6 +9,7 @@ import Table from "./Components/Table";
 import Form from "./Components/Form"
 import Product from "./Views/Product";
 import Login from "./Login/Login";
+import SignIn from "./Login/SignIn";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -39,7 +40,12 @@ import Login from "./Login/Login";
           element: <Login />,
           
         },
-       
+
+        {
+          path: "/signin",
+          element: <SignIn />,
+          
+        },
       ],
     },
   ]);
