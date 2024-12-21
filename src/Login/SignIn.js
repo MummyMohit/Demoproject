@@ -27,19 +27,22 @@ const SignIn = () => {
         },
         validationSchema: ValidationSchema ,
         onSubmit: (values) => {
-            const data = {
+            const data = [{
                 firstName:values.firstName,
                 lastName:values.lastName,
                 email:values.email,
                 password:values.password
-            }
+            }]
             handlesubmitform(data)
+            formik.resetForm()
         },
         
     });
 
     const handlesubmitform = (data)=>{
-        console.log(data)
+       const updateData =JSON.parse(localStorage.getItem("FormData"))  || []
+       const FData = [...updateData,...data]
+       localStorage.setItem("FormData",JSON.stringify(FData))
     }
 
     return (

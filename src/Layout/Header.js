@@ -51,8 +51,8 @@ const Header = () => {
                 onMouseLeave={() => setDropdownOpen(false)}
               >
                 <Link
-                  to="/"
-                  className={`nav-link custom-nav-link ${location.pathname === "/" ? "active" : ""}`}
+                  to="/home"
+                  className={`nav-link custom-nav-link ${location.pathname === "/home" ? "active" : ""}`}
                   onClick={toggleDropdown}
                 >
                   Home
@@ -76,8 +76,8 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/login"
-                  className={`nav-link custom-nav-link ${location.pathname === "/login" ? "active" : ""}`}
+                  to="/"
+                  className={`nav-link custom-nav-link ${location.pathname === "/" ? "active" : ""}`}
                 >
                   Login
                 </Link>

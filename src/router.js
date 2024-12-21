@@ -17,6 +17,11 @@ import SignIn from "./Login/SignIn";
       children: [
         {
           path: "/",
+          element: <Login />,
+          
+        },
+        {
+          path: "/home",
           element: <Content />,
           
         },
