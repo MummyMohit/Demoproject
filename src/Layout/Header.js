@@ -25,7 +25,7 @@ const Header = () => {
               className="logo-img img-fluid"
               style={{ width: "40px", height: "40px" }}
             />
-            <h3 className="heading-t m-0 ms-2">Food App</h3>
+            <h3 className="heading-t m-0 ms-2">Shoping Web</h3>
           </div>
 
           {/* Toggle Button for Mobile */}

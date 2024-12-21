@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
+import { GirlPic } from '../Pic/Pic';
 import * as Yup from 'yup';
 
 const ValidationSchema = Yup.object().shape({
@@ -39,7 +40,9 @@ const Login = () => {
   return (
     <>
       <div className="container mt-5">
+      
         <form onSubmit={formik.handleSubmit}>
+        
           <div className="col-12 col-md-6 col-lg-6 col-sm-6 mb-3 mt-5">
             <input
               className="form-control form-control-lg"
@@ -76,6 +79,7 @@ const Login = () => {
           <div className="col-12 col-md-6 col-lg-6 col-sm-6 mt-4">
             <Link to="/signin">Create Account</Link>
           </div>
+        
         </form>
       </div>
     </>

@@ -6,6 +6,7 @@ import Nature from '../Image/pexels-felixmittermeier-956999.jpg'
 import  Basic from '../Image/pexels-karolina-grabowska-5717939.jpg'
 import Room from '../Image/pexels-pixabay-271624.jpg'
 import Dvideo from '../Image/3753702-uhd_3840_2160_25fps.mp4'
+import GirlPic from '../Image/Girl-shopping-HD-picture-01-280x235.jpg'
 export{
     Logopic,
     Lipi,
@@ -13,5 +14,6 @@ export{
     Nature,
     Basic,
     Room,
-    Dvideo
+    Dvideo,
+    GirlPic
 }
