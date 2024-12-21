@@ -51,7 +51,7 @@ const SignIn = () => {
                 <form onSubmit={formik.handleSubmit}>
                     <div className='col-12 col-md-6 col-lg-6 col-sm-6 mb-3 mt-2'>
                         <label for="exampleInputEmail1">First Name</label>
-                        <input type="text" className="form-control"
+                        <input type="text" className="form-control cstm-form"
                             id="exampleInputEmail1" aria-describedby="emailHelp"
                             name='firstName'
                             placeholder="Enter First Name"
